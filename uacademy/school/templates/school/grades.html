@@ -1,0 +1,17 @@
+{% extends 'school/_layout.html' %}
+
+{% block title %}
+    Класи
+{% endblock %}
+
+
+
+{% block content %}
+    <br>
+    <h3>Оберіть клас</h3>
+
+    {% for el in grades %}
+          <a href="{{ el.get_absolute_url }}" class="btn btn-primary btn-warning" btn-lg> {{ el.name }} </a>
+    {% endfor %}
+
+{% endblock %}

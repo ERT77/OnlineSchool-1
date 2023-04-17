@@ -1,0 +1,20 @@
+{% extends 'school/_layout.html' %}
+
+{% block title %}
+    Предмети
+{% endblock %}
+
+
+
+{% block content %}
+<!-- Breadcrumbs -->
+<ul class="breadcrumb">
+    <li><a href="{% url 'grades' %}">Класи</a></li>
+    <li>Предмети</li>
+  </ul>
+
+    <h3>Оберіть предмет</h3>
+      {% for el in courses %}
+          <button type="button" class="btn btn-primary btn-warning" btn-lg> {{ el.subject }} </button>
+      {% endfor %}
+{% endblock %}
